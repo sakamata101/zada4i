@@ -9,19 +9,18 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    int c1 = 0;
-    int c2 = 0;
-    int k = 0;
-    while (k < n) {
+    int even_count = 0;
+    int odd_count = 0;
+    for(int i = 0; i < n; i++) {
         int t;
         cin >> t;
         if (t % 2 == 0) {
-            c1 = c1 + 1;
+            even_count++;
         } else {
-            c2 = c2 + 1;
+            odd_count++;
         }
-        k = k + 1;
     }
-    cout << c1 << " " << c2 << endl;
+
+    cout << even_count << " " << odd_count << endl;
     return 0;
 }

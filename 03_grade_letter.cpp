@@ -7,12 +7,18 @@
 using namespace std;
 
 int main() {
+    const int threshold_A = 90;
+    const int threshold_B = 80;
+    const int threshold_C = 70;
+    const int threshold_D = 60;
     int ball;
     cin >> ball;
-    if (ball >= 90) cout << "A" << endl;
-    if (ball >= 80 && ball < 90) cout << "B" << endl;
-    if (ball >= 70 && ball < 80) cout << "C" << endl;
-    if (ball >= 60 && ball < 70) cout << "D" << endl;
-    if (ball < 60) cout << "F" << endl;
+    char grade;
+    if (ball >= threshold_A) grade = 'A';
+    else if (ball >= threshold_B) grade = 'B';
+    else if (ball >= threshold_C) grade = 'C';
+    else if (ball >= threshold_D) grade = 'D';
+    else grade = 'F';
+    cout << grade;
     return 0;
 }
